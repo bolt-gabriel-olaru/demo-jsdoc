@@ -1,0 +1,4 @@
+node_modules
+# TypeScript
+src/**/*.js
+docs

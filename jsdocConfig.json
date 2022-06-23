@@ -1,0 +1,15 @@
+{
+  "source": {
+    "includePattern": "\\.(jsx|js)$",
+    "include": ["src", "README.md"],
+    "exclude": ["node_modules"]
+  },
+  "recurseDepth": 10,
+  "opts": {
+    "destination": "./docs/",
+    "recurse": true
+  },
+  "tags": {
+    "allowUnknownTags": ["optional"]
+  }
+}

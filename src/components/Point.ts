@@ -1,5 +1,10 @@
-/** Class representing a point. */
-class Point {
+/**
+ * An abstract base class for the customer entity in our application.
+ *
+ * Notice how TypeDoc shows the inheritance hierarchy for our class.
+ *
+ */
+export class Point {
     /** The x coordinate */
     public x: number
     /** The x coordinate */
@@ -55,10 +60,18 @@ class Point {
 
     /**
      * TestDEmo
-     * @param {String} name - test
-     * @param {Number} role - something
+     * @param name - test
+     * @param role - something
      */
     static testRadu(name: string, role: number): boolean {
+        return true;
+    }
+
+    /**
+     * This function will make something
+     * @param isActive - is user active
+     */
+    testParams(isActive: boolean): boolean {
         return true;
     }
 }

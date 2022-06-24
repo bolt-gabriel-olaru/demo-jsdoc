@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-docs-build": "yarn compile && jsdoc -c jsdocConfig.json",
-    "generate-docs": "jsdoc -c jsdocConfig.json",
-    "compile": "tsc -p tsconfig.json"
+    "generate-docs-build": "yarn compile && jsdoc -c typedoc.json",
+    "generate-docs": "typedoc",
+    "compile": "tsc -p tsconfig.json",
+    "typedoc-check": "typedoc --treatWarningsAsErrors"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "jsdoc": "^3.6.10"
+    "typedoc": "^0.22.17",
+    "typedoc-plugin-merge-modules": "^3.1.0",
+    "typedoc-plugin-rename-defaults": "^0.5.1"
   }
 }

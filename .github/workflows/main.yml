@@ -26,12 +26,8 @@ jobs:
           node-version: 14
       - name: yarn install
         run: yarn install
-      - name: tsc
-        run: yarn compile
       - name: generate jsdoc
         run: yarn generate-docs
-      - name: show docs
-        run: ls docs
       - name: Commit files
         run: |
           echo ${{ github.ref }}

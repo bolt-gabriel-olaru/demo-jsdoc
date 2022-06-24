@@ -30,6 +30,8 @@ jobs:
         run: yarn compile
       - name: generate jsdoc
         run: yarn generate-docs
+      - name: show files
+        run: ls ./docs
 #         uses: andstor/jsdoc-action@v1
 #         with:
 #           source_dir: ./src

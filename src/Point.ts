@@ -17,6 +17,7 @@ class Point {
     }
 
 
+
     /**
      * Get the x value.
      */
@@ -34,7 +35,7 @@ class Point {
 
     /**
      * Convert a string containing two comma-separated numbers into a point.
-     * @param str - The string containing two comma-separated numbers.
+     * @param {String} str - The string containing two comma-separated numbers.
      */
     static fromString(str: string): Point {
         const args = str.split(',').map(arg => +arg)

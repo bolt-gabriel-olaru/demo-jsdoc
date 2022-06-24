@@ -27,20 +27,14 @@ jobs:
       - name: yarn install
         run: yarn install
       - name: tsc
+        run: yarn compile
+      - name: generate-docs
         run: yarn generate-docs
-      - name: genshdoc result
-        run: echo "The result of genshdoc Action was ${{ steps.tsc.outputs.result }}"
-      - name: Commit files
-        run: |
-          echo ${{ github.ref }}
-          git add .
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "CI: Automated build push" -a | exit 0
-      - name: Push changes
-        if: github.ref == 'refs/heads/master'
-        uses: ad-m/github-push-action@master
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-        
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./docs
 

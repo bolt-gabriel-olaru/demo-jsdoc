@@ -29,11 +29,12 @@ jobs:
       - name: tsc
         run: yarn compile
       - name: generate jsdoc
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./src
-          output_dir: ./docs
-          config_file: jsdocConfig.json
+        run: yarn generate-docs
+#         uses: andstor/jsdoc-action@v1
+#         with:
+#           source_dir: ./src
+#           output_dir: ./docs
+#           config_file: jsdocConfig.json
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

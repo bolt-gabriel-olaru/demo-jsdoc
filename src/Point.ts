@@ -52,4 +52,13 @@ class Point {
         const args = str.split(',').map(arg => +arg)
         return new Point(args[0], args[1])
     }
+
+    /**
+     * TestDEmo
+     * @param {String} name - test
+     * @param {Number} role - something
+     */
+    static testRadu(name: string, role: number): boolean {
+        return true;
+    }
 }

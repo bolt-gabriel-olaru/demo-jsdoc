@@ -19,7 +19,7 @@ jobs:
       name: tsc
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: install node v14
         uses: actions/setup-node@v1
         with:
@@ -30,11 +30,9 @@ jobs:
         run: yarn compile
       - name: generate-docs
         run: yarn generate-docs
-      - name: Checkout code
-        uses: actions/checkout@v2
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
 

@@ -28,6 +28,7 @@ class Point {
 
     /**
      * Get the y value.
+     * @param {String} str - The string containing two comma-separated numbers.
      */
     getY() {
         return this.y

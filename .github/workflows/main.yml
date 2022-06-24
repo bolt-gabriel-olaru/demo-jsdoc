@@ -28,12 +28,7 @@ jobs:
         run: yarn install
       - name: tsc
         run: yarn generate-docs
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.0
-        with:
-          # Artifact name
-          name: "docs"
-          # A file, directory or wildcard pattern that describes what to upload
-          path: /docs/
-          # The desired behavior if no files are found using the provided path.
+      - name: genshdoc result
+        run: echo "The result of genshdoc Action was ${{ steps.tsc.outputs.result }}"
+        
 

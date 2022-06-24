@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Point.js</title>
+    <title>JSDoc: Source: index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Point.js</h1>
+    <h1 class="page-title">Source: index.js</h1>
 
     
 
@@ -26,39 +26,38 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/** Class representing a point. */
-class Point {
-    /**
-     * Create a point.
-     * @param {number} x - The x value.
-     * @param {number} y - The y value.
-     */
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
+            <pre class="prettyprint source linenums"><code>/**
+ * This is a beatiful class
+ */
+class Joke {
+    constructor() {
     }
     /**
-     * Get the x value.
+     * This is a test function for jsdoc
      */
-    getX() {
-        return this.x;
+    test() {
+        console.log("This is a test!");
     }
     /**
-     * Get the y value.
+     * Retrieves a user by email.
+     * @async
+     * @method
+     * @param {number} id - User email
+     * @returns {string} User object
      */
-    getY() {
-        return this.y;
+    getUserByID(id) {
+        return "Test";
     }
     /**
-     * Convert a string containing two comma-separated numbers into a point.
-     * @param str - The string containing two comma-separated numbers.
+     *
+     * @param {Point} point
+     * @returns A {@link Point} containing the parameter.
      */
-    static fromString(str) {
-        const args = str.split(',').map(arg => +arg);
-        return new Point(args[0], args[1]);
+    printX(point) {
+        console.log(point.x);
     }
 }
-//# sourceMappingURL=Point.js.map</code></pre>
+//# sourceMappingURL=index.js.map</code></pre>
         </article>
     </section>
 

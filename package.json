@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate-docs-build": "yarn compile && jsdoc -c jsdocConfig.json",
     "generate-docs": "jsdoc -c jsdocConfig.json",
-    "compile": "tsc ./src/index.ts"
+    "compile": "tsc -p tsconfig.json"
   },
   "repository": {
     "type": "git",

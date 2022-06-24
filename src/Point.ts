@@ -42,4 +42,14 @@ class Point {
         const args = str.split(',').map(arg => +arg)
         return new Point(args[0], args[1])
     }
+
+    /**
+     * TestDEmo
+     * @param {String} str - test
+     * @param {Number} a - something
+     */
+    static testDemo(str: string, a: number): Point {
+        const args = str.split(',').map(arg => +arg)
+        return new Point(args[0], args[1])
+    }
 }

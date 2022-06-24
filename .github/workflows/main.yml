@@ -28,20 +28,16 @@ jobs:
         run: yarn install
       - name: tsc
         run: yarn compile
-      - name: setup assets
-        run: mkdir docs
-      - name: Build
+      - name: generate jsdoc
         uses: andstor/jsdoc-action@v1
         with:
           source_dir: ./src
           output_dir: ./docs
           config_file: jsdocConfig.json
-          template: minami
-          front_page: README.md
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          destination_dir: ./docs
+          destination_dir: ./docsv2
 

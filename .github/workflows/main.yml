@@ -30,6 +30,8 @@ jobs:
         run: yarn compile
       - name: generate jsdoc
         run: yarn generate-docs
+      - name: show docs
+        run: ls docs
       - name: Commit files
         run: |
           echo ${{ github.ref }}

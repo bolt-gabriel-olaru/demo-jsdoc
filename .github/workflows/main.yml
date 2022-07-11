@@ -19,8 +19,6 @@ jobs:
       name: tsc
       runs-on: ubuntu-latest
       steps:
-      - name: work around permission issue
-        run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2
       - name: install node v14
         uses: actions/setup-node@v1
@@ -37,6 +35,7 @@ jobs:
           git add -A
           git config --local user.email "gabriel.olaru@bolt.eu"
           git config --local user.name "bolt-gabriel.olaru"
+          git config --global --add safe.directory /github/workspace
           git commit -m "deploy"
       - name: Force push to destination branch
         uses: ad-m/github-push-action@v0.5.0

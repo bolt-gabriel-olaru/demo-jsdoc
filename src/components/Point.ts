@@ -2,6 +2,7 @@
  * An abstract base class for the customer entity in our application.
  *
  * Notice how TypeDoc shows the inheritance hierarchy for our class.
+ * Another thing
  */
 export class Point {
     public x: number

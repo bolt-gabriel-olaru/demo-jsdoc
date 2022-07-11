@@ -38,3 +38,11 @@ export default class Joke {
         console.log(point.x);
     }
 }
+
+/**
+ * This matches dynamically shard_id of the messages and propagates it also to SQS.
+ * Use it if you are using shard specific SQS queues.
+ *
+ * Good idea would be to use it always together with city_id (or other shard identifier) that could be used for routing.
+ */
+export type MqFilterShardId = {is_shard_id_match: true};

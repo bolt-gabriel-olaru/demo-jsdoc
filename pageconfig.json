@@ -1,0 +1,8 @@
+{
+  "groups": [],
+  "listInvalidPageLinks": false,
+  "output": "pages",
+  "reflectionNavigationTitle": "Development API",
+  "replaceGlobalsPage": true,
+  "source": "./docs-source"
+}

@@ -3,5 +3,6 @@
   "entryPoints": ["./src"],
   "sort": ["source-order"],
   "name": "NJSC",
-  "entryPointStrategy": "Expand"
+  "entryPointStrategy": "Expand",
+  "excludeNotDocumented": "true"
 }

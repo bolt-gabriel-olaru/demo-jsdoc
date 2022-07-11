@@ -31,7 +31,6 @@ jobs:
       - name: Commit files
         run: |
           git init
-          git add -A
           git add --force --all docs/
           git config --local user.email "gabriel.olaru@bolt.eu"
           git config --local user.name "bolt-gabriel-olaru"

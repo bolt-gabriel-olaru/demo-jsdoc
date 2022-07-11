@@ -32,8 +32,6 @@ jobs:
         run: |
           git init
           git add --force --all docs/
-          git config --local user.email "gabriel.olaru@bolt.eu"
-          git config --local user.name "bolt-gabriel-olaru"
           git commit -m "deploy"
       - name: Force push to destination branch
         uses: ad-m/github-push-action@master

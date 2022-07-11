@@ -32,7 +32,7 @@ jobs:
         run: |
           cd docs
           git init
-          git add -A
+          git add --force -A 
           git config --local user.email "gabriel.olaru@bolt.eu"
           git config --local user.name "bolt-gabriel.olaru"
           git commit -m "deploy"
